@@ -46,10 +46,11 @@ in
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."*" = {
-      addKeysToAgent = "yes";
-    }
-    // privateConfig.programs.ssh.matchBlocks."*";
+    matchBlocks = privateConfig.programs.ssh.matchBlocks // {
+      "*" = (privateConfig.programs.ssh.matchBlocks."*" or {}) // {
+        addKeysToAgent = "yes";
+      };
+    };
   };
 
   home.stateVersion = "25.11";

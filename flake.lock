@@ -24,11 +24,11 @@
     "nixos-config-private": {
       "flake": false,
       "locked": {
-        "lastModified": 1768390982,
-        "narHash": "sha256-fXT8qYpgH7+sLLN+7RJKu/qXF5SyXCWyfn48z4jbEB0=",
+        "lastModified": 1768393003,
+        "narHash": "sha256-/4kaYdXhdZnO/kC/gXdzA2VXBhz1WgmcS0tpSCgwRys=",
         "ref": "refs/heads/main",
-        "rev": "c1bfc010f1476c01fbb67588bdd5ff566dbd0ef6",
-        "revCount": 6,
+        "rev": "4d2141e4b981bccf91f3e0f912028f4dbe563596",
+        "revCount": 7,
         "type": "git",
         "url": "ssh://git@github.com/JulianGrabitzky/nixos-config-private.git"
       },
@@ -90,11 +90,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1768376231,
-        "narHash": "sha256-lTfT2eY0wMImqAmIzjWqmenv5qQ6mF8dmkELaLFAUmg=",
+        "lastModified": 1768392315,
+        "narHash": "sha256-XcKkO+TzJVq8tf8zuTxUYXItEb261tvbdyVc4VxP254=",
         "owner": "anomalyco",
         "repo": "opencode",
-        "rev": "76b10d85eea11a3bac51248b84daae034dec2c3a",
+        "rev": "4347a77d89a0b397b2e5aa6165f33313f7fbaf6e",
         "type": "github"
       },
       "original": {
