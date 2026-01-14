@@ -18,7 +18,6 @@ in
     brave
     bitwarden-desktop
     code-cursor
-    docker-compose
     dive
     discord
     fastfetch
@@ -29,8 +28,6 @@ in
     nil
     nixpkgs-fmt
     zed-editor
-    bambu-studio
-    orca-slicer
   ];
 
   programs.git = {
@@ -51,7 +48,8 @@ in
     enableDefaultConfig = false;
     matchBlocks."*" = {
       addKeysToAgent = "yes";
-    } // privateConfig.programs.ssh.matchBlocks."*";
+    }
+    // privateConfig.programs.ssh.matchBlocks."*";
   };
 
   home.stateVersion = "25.11";
