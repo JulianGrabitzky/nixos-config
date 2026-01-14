@@ -33,6 +33,7 @@ in
     enable = true;
     lfs.enable = true;
     settings = privateConfig.programs.git.settings;
+    includes = privateConfig.programs.git.includes;
   };
 
   programs.direnv = {

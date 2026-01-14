@@ -24,11 +24,11 @@
     "nixos-config-private": {
       "flake": false,
       "locked": {
-        "lastModified": 1768322250,
-        "narHash": "sha256-1zcf2e5RqlMdXmSzdQzxA92zGCWJqsEj7y5ZIFan/SM=",
+        "lastModified": 1768390982,
+        "narHash": "sha256-fXT8qYpgH7+sLLN+7RJKu/qXF5SyXCWyfn48z4jbEB0=",
         "ref": "refs/heads/main",
-        "rev": "e3b2f71043d403acca3f02f088f9ca99911180e3",
-        "revCount": 2,
+        "rev": "c1bfc010f1476c01fbb67588bdd5ff566dbd0ef6",
+        "revCount": 6,
         "type": "git",
         "url": "ssh://git@github.com/JulianGrabitzky/nixos-config-private.git"
       },
