@@ -2,7 +2,12 @@
 
 {
   virtualisation = {
-    containers.enable = true;
+    containers = {
+      enable = true;
+      containersConf.settings = {
+        engine.compose_warning_logs = false;
+      };
+    };
     podman = {
       enable = true;
 
@@ -14,5 +19,9 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ podman-compose ];
+  environment.systemPackages = with pkgs; [
+    podman-compose
+    dive
+    podman-tui
+  ];
 }

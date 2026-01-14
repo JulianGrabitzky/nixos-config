@@ -18,7 +18,6 @@ in
     brave
     bitwarden-desktop
     code-cursor
-    dive
     discord
     fastfetch
     git
