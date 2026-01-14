@@ -14,7 +14,6 @@ in
   home.homeDirectory = "/home/julian";
 
   home.packages = with pkgs; [
-    btop
     brave
     bitwarden-desktop
     code-cursor

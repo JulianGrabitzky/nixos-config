@@ -9,6 +9,7 @@
 
     ../../services/podman.nix
     ../../services/tailscale.nix
+    ../../services/btop.nix
     ../../services/printing.nix
     ../../services/sound.nix
     ../../services/fwupd.nix
