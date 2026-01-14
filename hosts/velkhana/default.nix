@@ -7,7 +7,7 @@
     ../../modules/nix-ld.nix
     ./users/julian.nix
 
-    ../../services/docker.nix
+    ../../services/podman.nix
     ../../services/tailscale.nix
     ../../services/ssh.nix
     ../../services/printing.nix
