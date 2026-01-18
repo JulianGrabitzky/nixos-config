@@ -43,6 +43,7 @@ in
   };
 
   services.ssh-agent.enable = true;
+  services.ssh-agent.enableBashIntegration = true;
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
