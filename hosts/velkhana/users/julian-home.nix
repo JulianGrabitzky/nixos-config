@@ -44,6 +44,13 @@ in
 
   services.ssh-agent.enable = true;
   services.ssh-agent.enableBashIntegration = true;
+
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent"
+    '';
+  };
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
