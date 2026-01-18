@@ -22,6 +22,7 @@ in
     git
     ghostty
     inputs.opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
+    logseq
     nixd
     nil
     nixpkgs-fmt
@@ -46,7 +47,7 @@ in
     enable = true;
     enableDefaultConfig = false;
     matchBlocks = privateConfig.programs.ssh.matchBlocks // {
-      "*" = (privateConfig.programs.ssh.matchBlocks."*" or {}) // {
+      "*" = (privateConfig.programs.ssh.matchBlocks."*" or { }) // {
         addKeysToAgent = "yes";
       };
     };
