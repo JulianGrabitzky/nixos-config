@@ -27,6 +27,7 @@ in
     nil
     nixpkgs-fmt
     zed-editor
+    openfortivpn
   ];
 
   programs.git = {
