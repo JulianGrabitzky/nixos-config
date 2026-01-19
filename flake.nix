@@ -12,7 +12,10 @@
       url = "git+ssh://git@github.com/JulianGrabitzky/nixos-config-private.git";
       flake = false;
     };
-    opencode-flake.url = "github:anomalyco/opencode";
+    opencode-flake = {
+      url = "github:anomalyco/opencode/upgrade-bun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
