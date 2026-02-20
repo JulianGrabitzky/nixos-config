@@ -8,7 +8,6 @@
     ./users/julian.nix
 
     ../../services/podman.nix
-    ../../services/tailscale.nix
     ../../services/btop.nix
     ../../services/printing.nix
     ../../services/sound.nix
