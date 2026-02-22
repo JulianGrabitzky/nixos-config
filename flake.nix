@@ -13,7 +13,7 @@
       flake = false;
     };
     opencode-flake = {
-      url = "github:anomalyco/opencode/upgrade-bun";
+      url = "github:anomalyco/opencode?tag=v1.2.10";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
