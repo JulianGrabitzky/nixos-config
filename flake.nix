@@ -14,7 +14,8 @@
     };
     opencode-flake = {
       url = "github:anomalyco/opencode?tag=v1.2.10";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # Opencode needs bun 1.3.9
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
