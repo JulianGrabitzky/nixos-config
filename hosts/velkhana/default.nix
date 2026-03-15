@@ -11,6 +11,7 @@
     ../../services/btop.nix
     ../../services/printing.nix
     ../../services/sound.nix
+    ../../services/power-thermal.nix
     ../../services/fwupd.nix
 
     ../../desktops/plasma6.nix
