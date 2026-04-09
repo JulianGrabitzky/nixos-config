@@ -25,6 +25,6 @@
 
   networking.hostName = "velkhana";
   networking.networkmanager.enable = true;
-
+  hardware.graphics.enable = true;
   system.stateVersion = "25.11";
 }
