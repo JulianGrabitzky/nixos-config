@@ -8,7 +8,7 @@
     ./users/julian.nix
 
     ../../services/podman.nix
-    ../../services/btop.nix
+    #../../services/btop.nix
     ../../services/printing.nix
     ../../services/sound.nix
     ../../services/power-thermal.nix
