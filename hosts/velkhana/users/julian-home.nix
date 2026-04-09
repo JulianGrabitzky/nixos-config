@@ -28,6 +28,8 @@ in
     nixpkgs-fmt
     zed-editor
     openfortivpn
+    pciutils
+    usbutils
   ];
 
   programs.git = {
