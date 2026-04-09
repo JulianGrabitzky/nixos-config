@@ -30,6 +30,7 @@ in
     openfortivpn
     pciutils
     usbutils
+    ripgrep
   ];
 
   programs.git = {
