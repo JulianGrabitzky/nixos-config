@@ -14,6 +14,7 @@ in
 
   home.packages = with pkgs; [
     brave
+    firefox
     bitwarden-desktop
     code-cursor
     discord
