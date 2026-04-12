@@ -1,10 +1,9 @@
 {
-  config,
   pkgs,
-  lib,
   inputs,
+  system,
   ...
-}@args:
+}:
 
 let
   privateConfig = import "${inputs.nixos-config-private.outPath}/velkhana.nix";
@@ -21,7 +20,7 @@ in
     fastfetch
     git
     ghostty
-    inputs.opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.opencode-flake.packages.${system}.default
     logseq
     nixd
     nil
@@ -55,6 +54,7 @@ in
       export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent"
     '';
   };
+
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -65,5 +65,6 @@ in
     };
   };
 
+  # Keep this aligned with the Home Manager release in flake.nix.
   home.stateVersion = "25.11";
 }

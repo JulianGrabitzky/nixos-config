@@ -1,25 +1,28 @@
 { pkgs, ... }:
 
+let
+  powerprofilesctl = "${pkgs.power-profiles-daemon}/bin/powerprofilesctl";
+in
+
 {
-  services.power-profiles-daemon.enable = false;
+  # Framework AMD laptops work better with power-profiles-daemon than TLP.
+  services.power-profiles-daemon.enable = true;
 
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
-
-      CPU_MIN_PERF_ON_AC = 0;
-      CPU_MAX_PERF_ON_AC = 70;
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 40;
-
-      PLATFORM_PROFILE_ON_AC = "balanced";
-      PLATFORM_PROFILE_ON_BAT = "low-power";
-    };
+  # Start in the quietest profile, but keep Plasma's GUI power mode switching.
+  systemd.services.power-profile-default = {
+    description = "Set the default power profile";
+    wantedBy = [ "multi-user.target" ];
+    after = [
+      "dbus.service"
+      "power-profiles-daemon.service"
+    ];
+    wants = [ "power-profiles-daemon.service" ];
+    serviceConfig.Type = "oneshot";
+    script = ''
+      # Change this to `--disable` later if you do not want AC/battery events to switch profiles.
+      ${powerprofilesctl} configure-battery-aware --enable
+      ${powerprofilesctl} set power-saver
+    '';
   };
 
   environment.systemPackages = with pkgs; [

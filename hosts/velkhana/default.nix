@@ -1,14 +1,18 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  system,
+  ...
+}:
 
 {
   imports = [
     ./hardware-configuration.nix
     ../../common/default.nix
-    ../../modules/nix-ld.nix
-    ./users/julian.nix
 
     ../../services/podman.nix
-    #../../services/btop.nix
+    ../../services/btop.nix
+    ../../services/bluetooth.nix
     ../../services/printing.nix
     ../../services/sound.nix
     ../../services/power-thermal.nix
@@ -16,6 +20,23 @@
 
     ../../desktops/plasma6.nix
   ];
+
+  programs.nix-ld.enable = true;
+
+  users.users.julian = {
+    isNormalUser = true;
+    description = "julian";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
+  };
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { inherit inputs system; };
+  home-manager.users.julian = import ./home.nix;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

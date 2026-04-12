@@ -15,7 +15,11 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Standard packages and features
+  services.xserver.xkb = {
+    layout = "eu";
+    variant = "";
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

@@ -21,29 +21,21 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       home-manager,
       nixos-hardware,
-      nixos-config-private,
       ...
     }@inputs:
     {
       nixosConfigurations = {
-        # sudo nixos-rebuild switch --flake .#velkhana
-        velkhana = nixpkgs.lib.nixosSystem {
+        # Each host owns its own system and Home Manager wiring.
+        velkhana = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs system; };
           modules = [
             ./hosts/velkhana/default.nix
             nixos-hardware.nixosModules.framework-amd-ai-300-series
             home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.julian = import ./hosts/velkhana/users/julian-home.nix;
-            }
           ];
         };
       };

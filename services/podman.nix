@@ -11,10 +11,10 @@
     podman = {
       enable = true;
 
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      # Expose the familiar docker CLI for tools that expect it.
       dockerCompat = true;
 
-      # Required for containers under podman-compose to be able to talk to each other.
+      # Let compose-managed containers resolve each other by name.
       defaultNetwork.settings.dns_enabled = true;
     };
   };

@@ -7,8 +7,8 @@
   };
   services.desktopManager.plasma6.enable = true;
 
-  services.xserver.xkb = {
-    layout = "eu";
-    variant = "";
-  };
+  # Plasma uses Bluedevil for native Bluetooth settings and tray integration.
+  environment.systemPackages = with pkgs; [
+    kdePackages.bluedevil
+  ];
 }
