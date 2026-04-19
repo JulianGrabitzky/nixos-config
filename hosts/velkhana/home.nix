@@ -31,6 +31,7 @@ in
     pciutils
     usbutils
     ripgrep
+    localsend
   ];
 
   programs.git = {
