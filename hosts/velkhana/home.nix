@@ -21,6 +21,7 @@ in
     discord
     fastfetch
     firefox
+    freecad
     git
     ghostty
     inputs.opencode-flake.packages.${system}.default
