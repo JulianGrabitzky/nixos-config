@@ -47,5 +47,7 @@
   networking.hostName = "velkhana";
   networking.networkmanager.enable = true;
 
+  services.flatpak.enable = true;
+
   system.stateVersion = "25.11";
 }
