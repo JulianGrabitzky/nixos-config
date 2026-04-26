@@ -8,12 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
     nixos-config-private = {
       url = "git+ssh://git@github.com/JulianGrabitzky/nixos-config-private.git";
       flake = false;
     };
     opencode-flake = {
-      url = "github:anomalyco/opencode?tag=v1.4.3";
+      url = "github:anomalyco/opencode?tag=v1.14.25";
       # Opencode needs bun 1.3.9
       # inputs.nixpkgs.follows = "nixpkgs";
     };

@@ -9,16 +9,18 @@ let
   privateConfig = import "${inputs.nixos-config-private.outPath}/velkhana.nix";
 in
 {
+  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
+
   home.username = "julian";
   home.homeDirectory = "/home/julian";
 
   home.packages = with pkgs; [
     brave
-    firefox
     bitwarden-desktop
     code-cursor
     discord
     fastfetch
+    firefox
     git
     ghostty
     inputs.opencode-flake.packages.${system}.default
@@ -29,10 +31,16 @@ in
     zed-editor
     openfortivpn
     pciutils
+    prusa-slicer
     usbutils
     ripgrep
     localsend
   ];
+
+  services.flatpak = {
+    enable = true;
+    packages = [ "com.bambulab.BambuStudio" ];
+  };
 
   programs.git = {
     enable = true;
