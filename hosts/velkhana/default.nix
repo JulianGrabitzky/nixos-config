@@ -17,6 +17,7 @@
     ../../services/sound.nix
     ../../services/power-thermal.nix
     ../../services/fwupd.nix
+    ../../services/localsend.nix
 
     ../../desktops/plasma6.nix
   ];
