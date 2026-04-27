@@ -29,13 +29,13 @@ in
     nixd
     nil
     nixpkgs-fmt
-    zed-editor
     openfortivpn
+    openscad
     pciutils
     prusa-slicer
-    usbutils
     ripgrep
-    localsend
+    usbutils
+    zed-editor
   ];
 
   services.flatpak = {
