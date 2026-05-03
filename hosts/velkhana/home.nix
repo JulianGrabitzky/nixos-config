@@ -23,6 +23,7 @@ in
     firefox
     freecad
     git
+    unstable.gemini-cli
     ghostty
     unstable.codex
     logseq
