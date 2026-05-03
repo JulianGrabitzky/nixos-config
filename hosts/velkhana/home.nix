@@ -17,6 +17,7 @@ in
   home.packages = with pkgs; [
     brave
     bitwarden-desktop
+    bun
     code-cursor
     discord
     fastfetch
