@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   system,
+  unstable,
   ...
 }:
 
@@ -36,7 +37,10 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.extraSpecialArgs = { inherit inputs system; };
+  home-manager.extraSpecialArgs = {
+    inherit inputs system;
+    inherit unstable;
+  };
   home-manager.users.julian = import ./home.nix;
 
   boot.loader.systemd-boot.enable = true;

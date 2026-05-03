@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,7 +33,13 @@
         # Each host owns its own system and Home Manager wiring.
         velkhana = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs system; };
+          specialArgs = {
+            inherit inputs system;
+            unstable = import inputs.nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
           modules = [
             ./hosts/velkhana/default.nix
             nixos-hardware.nixosModules.framework-amd-ai-300-series

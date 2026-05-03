@@ -1,7 +1,7 @@
 {
   pkgs,
   inputs,
-  system,
+  unstable,
   ...
 }:
 
@@ -24,11 +24,12 @@ in
     freecad
     git
     ghostty
-    inputs.opencode-flake.packages.${system}.default
+    unstable.codex
     logseq
     nixd
     nil
     nixpkgs-fmt
+    unstable.opencode
     openfortivpn
     openscad
     pciutils
