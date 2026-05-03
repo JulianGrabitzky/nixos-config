@@ -14,11 +14,6 @@
       url = "git+ssh://git@github.com/JulianGrabitzky/nixos-config-private.git";
       flake = false;
     };
-    opencode-flake = {
-      url = "github:anomalyco/opencode?tag=v1.14.25";
-      # Opencode needs bun 1.3.9
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
