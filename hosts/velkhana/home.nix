@@ -32,6 +32,7 @@ in
     nil
     nixpkgs-fmt
     unstable.opencode
+    obsidian
     openfortivpn
     openscad
     pciutils
