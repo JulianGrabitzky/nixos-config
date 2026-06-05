@@ -71,8 +71,8 @@ in
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = privateConfig.programs.ssh.matchBlocks // {
-      "*" = (privateConfig.programs.ssh.matchBlocks."*" or { }) // {
+    settings = privateConfig.programs.ssh.settings // {
+      "*" = (privateConfig.programs.ssh.settings."*" or { }) // {
         addKeysToAgent = "yes";
       };
     };
