@@ -60,7 +60,6 @@ in
   };
 
   services.ssh-agent.enable = true;
-  services.ssh-agent.enableBashIntegration = true;
 
   programs.bash = {
     enable = true;
@@ -80,5 +79,5 @@ in
   };
 
   # Keep this aligned with the Home Manager release in flake.nix.
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }
