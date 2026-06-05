@@ -24,7 +24,7 @@ in
     firefox
     freecad
     git
-    unstable.gemini-cli
+    unstable.antigravity-cli
     ghostty
     unstable.codex
     logseq
