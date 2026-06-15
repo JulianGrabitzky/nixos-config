@@ -32,6 +32,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "dialout"
     ];
   };
 
