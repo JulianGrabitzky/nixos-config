@@ -27,7 +27,6 @@ in
     unstable.antigravity-cli
     ghostty
     unstable.codex
-    logseq
     nixd
     nil
     nixpkgs-fmt
