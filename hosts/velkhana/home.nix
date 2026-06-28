@@ -24,6 +24,7 @@ in
     firefox
     freecad
     git
+    git-xet
     unstable.antigravity-cli
     ghostty
     unstable.codex
@@ -48,7 +49,6 @@ in
   programs.git = {
     enable = true;
     lfs.enable = true;
-    xet.enable = true;
     settings = privateConfig.programs.git.settings;
     includes = privateConfig.programs.git.includes;
   };
