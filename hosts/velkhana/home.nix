@@ -19,7 +19,6 @@ in
     brave
     bitwarden-desktop
     bun
-    code-cursor
     discord
     fastfetch
     firefox
