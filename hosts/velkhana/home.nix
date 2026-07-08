@@ -13,6 +13,7 @@ in
 
   home.username = "julian";
   home.homeDirectory = "/home/julian";
+  home.sessionVariables.SSH_AUTH_SOCK = "\${XDG_RUNTIME_DIR}/ssh-agent";
 
   home.packages = with pkgs; [
     brave
@@ -25,7 +26,6 @@ in
     freecad
     git
     git-xet
-    unstable.antigravity-cli
     ghostty
     unstable.codex
     nixd
@@ -64,7 +64,7 @@ in
   programs.bash = {
     enable = true;
     initExtra = ''
-      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent"
+      export SSH_AUTH_SOCK="''${XDG_RUNTIME_DIR}/ssh-agent"
     '';
   };
 
