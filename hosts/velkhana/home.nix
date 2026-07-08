@@ -36,7 +36,6 @@ in
     openfortivpn
     openscad
     pciutils
-    prusa-slicer
     ripgrep
     usbutils
     zed-editor
