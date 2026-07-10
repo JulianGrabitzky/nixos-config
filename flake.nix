@@ -10,6 +10,7 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    llm-agents-nix.url = "github:numtide/llm-agents.nix";
     nixos-config-private = {
       url = "git+ssh://git@github.com/JulianGrabitzky/nixos-config-private.git";
       flake = false;

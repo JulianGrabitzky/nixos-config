@@ -26,11 +26,11 @@ in
     git
     git-xet
     ghostty
-    unstable.codex
+    llm-agents.codex
     nixd
     nil
     nixpkgs-fmt
-    unstable.opencode
+    llm-agents.opencode
     obsidian
     openfortivpn
     openscad
