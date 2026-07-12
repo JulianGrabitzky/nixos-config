@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   time.timeZone = "Europe/Berlin";
@@ -29,7 +29,6 @@
     "electron-39.8.10"
   ];
   nixpkgs.overlays = [
-    inputs.llm-agents-nix.overlays.default
     (final: prev: {
       bitwarden-desktop = prev.bitwarden-desktop.override {
         electron_39 = final.electron_39-bin;

@@ -7,6 +7,7 @@
 
 let
   privateConfig = import "${inputs.nixos-config-private.outPath}/velkhana.nix";
+  llmAgents = inputs.llm-agents-nix.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
@@ -27,11 +28,11 @@ in
     git
     git-xet
     ghostty
-    llm-agents.codex
+    llmAgents.codex
     nixd
     nil
     nixpkgs-fmt
-    llm-agents.opencode
+    llmAgents.opencode
     obsidian
     openfortivpn
     openscad
