@@ -39,6 +39,7 @@ in
     pciutils
     ripgrep
     usbutils
+    inputs.t3code-nix.packages.${system}.t3code
     zed-editor
   ];
 
