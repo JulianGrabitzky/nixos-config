@@ -28,12 +28,11 @@ in
     git-xet
     ghostty
     llmAgents.codex
+    llmAgents.opencode
     nixd
     nil
     nixpkgs-fmt
-    llmAgents.opencode
     obsidian
-    opencode
     openfortivpn
     openscad
     pciutils
