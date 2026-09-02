@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  unstable,
   ...
 }:
 
@@ -39,7 +38,7 @@ in
     pciutils
     ripgrep
     usbutils
-    inputs.t3code-nix.packages.${system}.t3code
+    inputs.t3code-nix.packages.${pkgs.stdenv.hostPlatform.system}.t3code
     zed-editor
   ];
 
