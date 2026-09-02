@@ -33,6 +33,7 @@ in
     nixpkgs-fmt
     llmAgents.opencode
     obsidian
+    opencode
     openfortivpn
     openscad
     pciutils
