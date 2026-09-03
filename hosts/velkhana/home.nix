@@ -9,7 +9,6 @@ let
   llmAgents = inputs.llm-agents-nix.packages.${pkgs.stdenv.hostPlatform.system};
   t3code = inputs.t3code-nix.packages.${pkgs.stdenv.hostPlatform.system}.t3code.override {
     codex = llmAgents.codex;
-    opencode = llmAgents.opencode;
   };
 in
 {
