@@ -7,9 +7,6 @@
 let
   privateConfig = import "${inputs.nixos-config-private.outPath}/velkhana.nix";
   llmAgents = inputs.llm-agents-nix.packages.${pkgs.stdenv.hostPlatform.system};
-  t3code = inputs.t3code-nix.packages.${pkgs.stdenv.hostPlatform.system}.t3code.override {
-    codex = llmAgents.codex;
-  };
 in
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
@@ -41,7 +38,8 @@ in
     pciutils
     ripgrep
     usbutils
-    t3code
+    llmAgents.t3code
+    llmAgents.t3code-desktop
     zed-editor
   ];
 
