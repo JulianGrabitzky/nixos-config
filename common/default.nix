@@ -20,10 +20,18 @@
     variant = "";
   };
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    # Binary cache for numtide/llm-agents.nix so llmAgents.* don't rebuild from source.
+    # See https://github.com/numtide/llm-agents.nix and https://cache.numtide.com
+    extra-substituters = [ "https://cache.numtide.com" ];
+    extra-trusted-public-keys = [
+      "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+    ];
+  };
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
