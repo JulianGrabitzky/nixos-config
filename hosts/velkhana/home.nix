@@ -28,6 +28,7 @@ in
     git-xet
     ghostty
     llmAgents.codex
+    llmAgents.herdr
     llmAgents.opencode
     nixd
     nil
