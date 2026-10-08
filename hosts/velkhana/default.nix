@@ -21,6 +21,7 @@
     ../../services/localsend.nix
 
     ../../desktops/plasma6.nix
+    ../../desktops/niri.nix
   ];
 
   programs.nix-ld.enable = true;

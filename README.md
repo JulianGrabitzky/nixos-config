@@ -47,6 +47,22 @@ Build and switch to the new system:
 sudo nixos-rebuild switch --flake .#velkhana
 ```
 
+## Trying Niri
+
+The `velkhana` host offers both Plasma and a basic Niri session in SDDM.
+After rebuilding, log out and select **Niri** in the login screen's session menu.
+To prepare it for the next boot without changing your current work session:
+
+```bash
+sudo nixos-rebuild boot --flake .#velkhana
+```
+
+Reboot when you are ready to try it. Niri creates an editable configuration at
+`~/.config/niri/config.kdl` on first launch. The keyboard layout follows the shared
+`eu` layout. Default shortcuts include `Super+T` for Alacritty, `Super+D` for the
+Fuzzel app launcher, `Super+Shift+/` for shortcut help, `Super+Alt+L` to lock, and
+`Super+Shift+E` to exit. Waybar supplies the status bar and Mako handles notifications.
+
 ## Updating Inputs
 
 Update all flake inputs:
