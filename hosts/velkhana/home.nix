@@ -28,8 +28,11 @@ in
     git-xet
     ghostty
     llmAgents.codex
+    llmAgents.claude-code
     llmAgents.herdr
     llmAgents.opencode
+    llmAgents.t3code
+    llmAgents.t3code-desktop
     nixd
     nil
     nixpkgs-fmt
@@ -39,8 +42,6 @@ in
     pciutils
     ripgrep
     usbutils
-    llmAgents.t3code
-    llmAgents.t3code-desktop
     zed-editor
   ];
 
